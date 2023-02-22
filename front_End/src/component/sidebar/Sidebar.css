@@ -1,0 +1,30 @@
+.sidebar{
+  width: 240px;
+  background-color: #4CAAAA;  
+  height: 92vh;
+  padding: 5px;
+  transition: all 1s;
+  border-radius: 10px;
+}
+
+ul{
+  padding:  0;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+ul li a:hover,
+ul li a.active {
+   background-color: blue;
+}

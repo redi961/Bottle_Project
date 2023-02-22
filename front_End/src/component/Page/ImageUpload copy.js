@@ -34,14 +34,6 @@ function ImageUpload() {
         });
     };
 
-    useEffect(() => {
-        axios
-            .get('/bottle/user')
-            .then(response => detect_setFile(response.data))
-            .catch(error => console.log(error))
-            console.log(detect_file);
-        }, []);
-
     return (
         <div id="upload_contents">
             <input
@@ -52,7 +44,7 @@ function ImageUpload() {
                 }}/>
             <button id="upload" onClick={handleUpload}>Upload</button>
             <div id="img">{imageUrl && <img src={imageUrl} alt="Uploaded Image"/>}{imageUrl && <img src={detect_file} alt="Uploaded Image"/>}</div>
-
+            
         </div>
     );
 }
