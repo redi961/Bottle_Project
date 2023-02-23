@@ -4,7 +4,7 @@ import logo from '../../image/logo.jpg'
 import email_img from '../../image/email.jpg'
 import pw from '../../image/pass.png'
 
-import './login.css'
+import '../../styles/login.css'
 
 
 function Login() {
@@ -37,6 +37,7 @@ function Login() {
                 </div>
                 <div className='container-login'>
                     <h1>Bottle Collector</h1>
+                  <div className='input_zone'>
                     <div className ="first_input">
                       <img src={email_img} alt ="email" className ='input_icon'/>
                       <input className='input_slot' type="Email" placeholder="E-mail" value={email} onChange={(event) => setEmail(event.target.value)} />
@@ -45,6 +46,7 @@ function Login() {
                       <img src={pw} alt ="pass" className ='input_icon'/>
                       <input className='input_slot' type="password" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)} />
                     </div>
+                  </div>
                     <div className='button_zone'>
                     <button className ="login_button" onClick={handleSubmit}>Login</button>
                     <button className ="signUp_button" >Sign Up</button>

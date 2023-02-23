@@ -41,11 +41,19 @@
 }
 
 .container-login {
-  padding-top : 40px
+  padding-top : 40px;
 }
 
 .first_input {
   padding-top: 40px;
+}
+
+.center_div {
+  width : 350px
+}
+
+.input_zone {
+  padding-right: 75px;
 }
 
 input {
@@ -70,12 +78,14 @@ input {
 }
 
 .input_slot {
+  align-items: center;
+  justify-content: center;
   padding-left: 70px;
   font-size: 20;
 }
 
 .button_zone {
-  padding-top: 20px;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
 }

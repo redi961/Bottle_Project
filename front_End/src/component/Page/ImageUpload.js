@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import './ImageUpload.css'
+import '../../styles/ImageUpload.css'
+import Sidebar from "../sidebar/Sidebar";
 
 function ImageUpload() {
     const [file, setFile] = useState(null);
@@ -44,6 +45,7 @@ function ImageUpload() {
 
     return (
         <div id="upload_contents">
+            <Sidebar/>
             <input
                 id="input"
                 type="file"

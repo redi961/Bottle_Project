@@ -20,5 +20,4 @@ body {
 }
 #root > div {
   display: flex;
-  justify-content: left;
 }
