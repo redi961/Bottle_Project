@@ -1,0 +1,117 @@
+/* 메인 백그라운드에 테마에 맞는 백그라운드 색 추가할것 */
+.main {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  width: 94vw; 
+  height: 75vh;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.sub-main {
+  display: flex;
+  justify-content: center;
+  height: 550px;
+  width: 35%;
+  box-shadow: 11px 12px 13px 12px rgb(207, 207, 207);
+  padding-top: 30px;
+  border-radius: 60px; 
+  background-color: white;
+}
+
+.imgs {
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
+
+.container-image {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 115px;
+  width: 115px;
+}
+
+.logo {
+  padding-top: 50px;
+  width: 200px;
+  height: 200px;
+}
+
+.container-login {
+  padding-top : 40px
+}
+
+.first_input {
+  padding-top: 40px;
+}
+
+input {
+  width: 300px;
+  height: 50px;
+  border-radius: 60px;
+  box-shadow:  inset 0px 0px 25px 0px #d1d0d0;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.input_icon {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  padding: 14px 0 0 18px;
+}
+
+.second_input {
+  padding-top: 20px;
+}
+
+.input_slot {
+  padding-left: 70px;
+  font-size: 20;
+}
+
+.button_zone {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login_button {
+  width: 30%;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #4CAAAA;
+  border-color: #4CAAAA;
+  color: white;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+}
+
+.login_button.hover {
+  background-color: blue;
+}
+
+.signUp_button {
+  width: 30%;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #4CAAAA;
+  border-color: #4CAAAA;
+  color: white;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+}
+
+.login_button:hover {
+  background-color: rgb(20, 114, 83);
+}
+
+.signUp_button:hover {
+  background-color: rgb(20, 114, 83);
+}

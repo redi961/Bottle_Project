@@ -6,9 +6,9 @@ import Sidebar from "./component/sidebar/Sidebar";
 function App() {
     return (
         <div>
+            {/*<Login/>*/}
             <Sidebar/>
             <ImageUpload/> 
-            {/* <Login/> */}
         </div>
     );
 }
