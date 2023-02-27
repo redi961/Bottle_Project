@@ -17,8 +17,11 @@ body {
     height: 93vh;
     background-color: white;
     border-radius: 10px;
-    
 }
 #root > div {
+<<<<<<< HEAD
   display: flex;  
+=======
+  display: flex;
+>>>>>>> e8079a7d12299d6b611da2b5d7dc9916c7fbdd6e
 }

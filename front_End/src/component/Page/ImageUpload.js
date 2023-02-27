@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Sidebar from '../sidebar/Sidebar';
+=======
+import React, {useState, useEffect} from "react";
+import axios from "axios";
+import '../../styles/ImageUpload.css'
+import Sidebar from "../sidebar/Sidebar";
+>>>>>>> e8079a7d12299d6b611da2b5d7dc9916c7fbdd6e
 
 const UpFile = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -34,6 +41,7 @@ const UpFile = () => {
 
     }, [imageUrl]);
     return (
+<<<<<<< HEAD
         <div>
             <Sidebar/>
             <form>
@@ -41,6 +49,19 @@ const UpFile = () => {
                 <button onClick={handleSubmit}>Upload</button>
             </form>
             {imageUrl && <img src={imageUrl} alt="uploaded image"/>}
+=======
+        <div id="upload_contents">
+            <Sidebar/>
+            <input
+                id="input"
+                type="file"
+                onChange={(e) => {
+                    encodeFileToBase64(e.target.files[0]);
+                }}/>
+            <button id="upload" onClick={handleUpload}>Upload</button>
+            <div id="img">{imageUrl && <img src={imageUrl} alt="Uploaded Image"/>}{imageUrl && <img src={detect_file} alt="Uploaded Image"/>}</div>
+
+>>>>>>> e8079a7d12299d6b611da2b5d7dc9916c7fbdd6e
         </div>
 
     );
