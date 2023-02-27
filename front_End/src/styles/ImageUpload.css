@@ -2,16 +2,18 @@
     height: 93vh;
     width: 77vw;
     margin-left: 1%;
-    display: flex;
+    justify-self: center;
 }
 
 input {
-    width: 100%;
+    width: 200px;
     height: 50px;
+    background-color: beige;    
 }
 #input::first-line {
     width: 100px;
     height: 50px;
+    
 }
 
 #upload {
@@ -28,15 +30,18 @@ input {
     width: 100px;
     height: 50px;
     padding: 6px 25px;
-    background-color: red;
+    
     border-color: #4CAAAA;
     border-radius: 5px;
     color: white;
     cursor: pointer;
 }
 
+
 #img {
     align-items: center;
     justify-content: center;
 
 }
+
+

@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@mui/icons-material": "^5.11.9",
+    "@nivo/bar": "^0.80.0",
+    "@nivo/core": "^0.80.0",
+    "@nivo/line": "^0.80.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -11,7 +14,9 @@
     "proxy": "^1.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "recharts": "^2.4.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
