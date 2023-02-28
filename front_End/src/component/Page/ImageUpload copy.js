@@ -16,7 +16,6 @@ function ImageUpload() {
             .post("/api/upload", formData)
             .then((response) => {
                 detect_setFile(response.data);
-
             })
             .catch((error) => {
                 console.log(error);
