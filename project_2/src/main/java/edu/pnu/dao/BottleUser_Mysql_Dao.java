@@ -1,6 +1,7 @@
 package edu.pnu.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -32,13 +33,26 @@ public class BottleUser_Mysql_Dao {
 		return us;
 	}
 	
+	//아이디 검사
+	public boolean loginIdChecker (String user_id) {
+		boolean flag = false;
+		String sqlStr = String.format("select count(*) from bottle_user where user_id = '%s'", user_id);
+		int resCheck = jdbcTemplate.queryForObject(sqlStr, Integer.class);
+		if (resCheck > 0) {
+			flag = true;
+		} return flag;
+	}
 	
 	// 로그인
 	public BottleUser login(String user_id, String user_pass) {
+		try {
 		String sqlStr = String.format("select*from bottle_user where user_id = '%s' AND user_pass = '%s'"
 				, user_id, user_pass);
 		BottleUser us = jdbcTemplate.queryForObject(sqlStr, new BeanPropertyRowMapper<BottleUser>(BottleUser.class));
 		return us;
+		}catch (IncorrectResultSizeDataAccessException error) {
+			return null;
+		}
 	}
 	
 	// 중복검사

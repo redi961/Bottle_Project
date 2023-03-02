@@ -1,0 +1,55 @@
+package edu.pnu.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import edu.pnu.domain.BottleUser;
+
+@Repository
+public class BottleUser_Mysql_Dao {
+	// jdbctemplate 추가
+	private JdbcTemplate jdbcTemplate;
+	
+	public BottleUser_Mysql_Dao() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Autowired
+	public BottleUser_Mysql_Dao(JdbcTemplate jdbcTemplate) {
+		super();
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	// 회원가입
+	public BottleUser signup(BottleUser user) {
+		String sqlStr_1 = "insert into bottle_user(user_id, user_pass, user_phon_num, user_name)"
+				+ " values(?, ?, ?, ?)";
+		jdbcTemplate.update(sqlStr_1, user.getUser_id(), user.getUser_pass(), 
+				user.getUser_phon_num(), user.getUser_name());
+		String sqlStr_2 = String.format("select*from bottle_user where user_id = '%s'", user.getUser_id());
+		BottleUser us = jdbcTemplate.queryForObject(sqlStr_2, new BeanPropertyRowMapper<BottleUser>(BottleUser.class));
+		return us;
+	}
+	
+	// 로그인
+	public BottleUser login(String user_id, String user_pass) {
+		String sqlStr = String.format("select*from bottle_user where user_id = '%s' AND user_pass = '%s'"
+				, user_id, user_pass);
+		BottleUser us = jdbcTemplate.queryForObject(sqlStr, new BeanPropertyRowMapper<BottleUser>(BottleUser.class));
+		return us;
+	}
+	
+	// 회원탈퇴
+	public BottleUser withdrawal(String user_id, String user_pass) {
+		String sqlStr_1 = String.format("delete from bottle_user where user_id = '%s' AND user_pass = '%s'"
+				, user_id, user_pass);
+		String sqlStr_2 = String.format("select*from bottle_user where user_id = '%s' AND user_pass = '%s'", user_id, user_pass);
+		BottleUser us = jdbcTemplate.queryForObject(sqlStr_2, new BeanPropertyRowMapper<BottleUser>(BottleUser.class));
+		jdbcTemplate.update(sqlStr_1);
+		return us;
+	}
+	
+	
+}

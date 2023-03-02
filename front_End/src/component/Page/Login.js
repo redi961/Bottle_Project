@@ -9,46 +9,36 @@ import '../../styles/login.css'
 
 
 function Login() {
-  const [Email, setEmail] = useState('');
-  const [Password, setPassword] = useState('');
+  const [Email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
   const navigator = useNavigate();
   
   const  onEmailHandler = (event) => {
-    setEmail(event.currentTarget.value);
+  setEmail(event.currentTarget.value);
 }
   const  onPasswordHandler = (event) => {
   setPassword(event.currentTarget.value);
 }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    axios.post('/api/login', {Email, Password })
+  const handleSubmit = () => {
+    if (Email == null) {
+      alert("아이디가 입력되지 않았습니다.")
+    } else if (password == null) {
+      alert("이름이 입력되지 않았습니다.")
+    } else if (Email != null && password != null)
+    axios.post('/bottle/user/login', {
+      user_id : Email,
+      user_pass : password
+    })
       .then(res => {
-        console.log(res);
-        console.log("res.data.userId :: ", res.data.userId);
-        console.log("res.data.msg :: ",res.data.msg);
-        if (res.data.email === undefined) {
-          // id 일치하지 않는 경우 userId = undefined, msg = '입력하신 id 가 일치하지 않습니다.'
-          console.log("======================", res.data.msg);
-          alert("입력하신 id 가 일치하지 않습니다.");
-        } else if (res.data.email === null) {
-          // id는 있지만, pw 는 다른 경우 userId = null , msg = undefined
-          console.log(
-            "======================",
-            "입력하신 비밀번호 가 일치하지 않습니다."
-          );
-          alert("입력하신 비밀번호 가 일치하지 않습니다.");
-        } 
-         else if (res.data.email === Email) {
-           // id, pw 모두 일치 userId = userId1, msg = undefined
-           console.log("======================", "로그인 성공");
-           sessionStorage.setItem("user_id", Email); // sessionStorage에 id를 user_id라는 key 값으로 저장
-           //sessionStorage.setItem("name", res.data.name); // sessionStorage에 id를 user_id라는 key 값으로 저장
-         }
-        // 작업 완료 되면 페이지 이동(새로고침)
+        alert(res.data);
+        if(res.data === "로그인 되었습니다.")
         document.location.href = "/";
       })
-      .catch();
+      .catch(error => {
+        // 회원가입 실패 시에 취해야할 액션
+        console.log(error.response.data);
+      });
   };
 
   const handelNav = (k) => {
@@ -77,7 +67,7 @@ function Login() {
                     </div>
                     <div className='div_input'>
                       <img src={pw} alt ="pass" className ='input_icon'/>
-                      <input className='input_slot' type="password" placeholder="Password" value={Password} onChange={onPasswordHandler} />
+                      <input className='input_slot' type="password" placeholder="Password" value={password} onChange={onPasswordHandler} />
                     </div>
                   </div>
                     <div className='button_zone'>

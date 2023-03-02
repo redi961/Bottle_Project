@@ -43,11 +43,17 @@ public class BottleUser_Controller {
 	
 	// 로그인
 	@PostMapping("/login")
-	public String login(String user_id, String user_pass) {
-		BottleUser log = bottleuser_Service.login(user_id, user_pass);
-		if(log.getUser_id() == null) {
-			return "회원가입 후 사용하시길 바랍니다.";
-		} else return"로그인 하였습니다.";
+	public String login(@RequestBody BottleUser user) {
+		boolean flag = bottleuser_Service.loginIdcheck(user.getUser_id());
+		if (flag == false) {
+			return "존재하지 않는 ID 입니다.";
+		} else if (flag == true) {
+			BottleUser log = bottleuser_Service.login(user.getUser_id(), user.getUser_pass());
+			if(log == null) {
+				return "비밀번호가 잘못되었습니다.";
+			} 
+		}  
+		return "로그인 되었습니다.";
 	}
 	
 	// 탈퇴

@@ -33,11 +33,13 @@ const onNameHandler = (event) => {
   const handleSubmit = () => {
     if (Email == null) {
       alert("아이디가 입력되지 않았습니다.")
+    } else if (name === null) {
+      alert("이름이 입력되지 않았습니다.")
     } else if (password == null) {
       alert("비밀번호가 입력되지 않았습니다.")
-    } else if (password != rePasswd) {
+    } else if (password !== rePasswd) {
       alert("비밀번호가 서로 일치하지 않습니다")
-    } else if (password === rePasswd) {
+    } else if (password === rePasswd && name != null && Email != null) {
     axios
       .post('/bottle/user/signup', {
         user_id : Email,
@@ -45,10 +47,8 @@ const onNameHandler = (event) => {
         user_name : name
       })
       .then(res => {
-        console.log(Email);
-        console.log(res.data);
         alert(res.data)
-        if(res.data =="회원가입에 성공하셨습니다.") 
+        if(res.data === "회원가입에 성공하셨습니다.") 
         document.location.href = "/login";
       })
       .catch(error => {

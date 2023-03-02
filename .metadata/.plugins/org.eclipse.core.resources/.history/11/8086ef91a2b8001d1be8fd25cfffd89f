@@ -1,0 +1,21 @@
+package edu.pnu;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import edu.pnu.dao.BottleUser_Mysql_Dao;
+
+@SpringBootTest
+class Project2ApplicationTests {
+
+	@Test
+	void contextLoads() {
+		
+		@Autowired
+		bottleUser_Mysql_Dao dao;
+		
+		System.out.println();		
+	}
+
+}

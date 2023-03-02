@@ -32,6 +32,12 @@ public class BottleUser_Service {
 		return us;
 	}
 	
+	//로그인중 아이디 검사
+	public boolean loginIdcheck (String user_id) {
+		boolean flag = bottleuser_Dao.loginIdChecker(user_id);
+		return flag;
+	}
+	
 	// 로그인
 	public BottleUser login(String user_id, String user_pass) {
 		BottleUser us = bottleuser_Dao.login(user_id, user_pass);

@@ -1,0 +1,20 @@
+package edu.pnu;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import edu.pnu.dao.BottleUser_Mysql_Dao;
+
+@SpringBootTest
+class Project2ApplicationTests {
+	
+	@Autowired
+	BottleUser_Mysql_Dao test;
+	
+	@Test
+	void contextLoads() {
+		System.out.println(("Result :: " + test.IdCheck("naver@naver.com");
+	}
+
+}

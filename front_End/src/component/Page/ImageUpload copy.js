@@ -11,7 +11,7 @@ function ImageUpload() {
         const formData = new FormData();
         formData.append("image", file);
         setImageUrl(file);
-
+        
         axios
             .post("/api/upload", formData)
             .then((response) => {
