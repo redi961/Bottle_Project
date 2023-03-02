@@ -36,7 +36,7 @@ const onNameHandler = (event) => {
     } else if (password == null) {
       alert("비밀번호가 입력되지 않았습니다.")
     } else if (password != rePasswd) {
-      alert("비밀번호가 일치하지 않습니다")
+      alert("비밀번호가 서로 일치하지 않습니다")
     } else if (password === rePasswd) {
     axios
       .post('/bottle/user/signup', {
