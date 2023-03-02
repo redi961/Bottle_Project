@@ -17,7 +17,8 @@ body {
     height: 93vh;
     background-color: white;
     border-radius: 10px;
+    display: flex;
 }
-#root > div {
-  display: flex;  
+#test{
+  display: flex;
 }

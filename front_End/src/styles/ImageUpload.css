@@ -2,17 +2,20 @@
     height: 93vh;
     width: 77vw;
     margin-left: 1%;
-    display: flex;
+    justify-self: center;
 }
 
-input {
-    width: 100%;
+inputfile {
+    width: 200px;
     height: 50px;
+    background-color: beige;
 }
-#input::first-line {
+#inputfile::first-line {
     width: 100px;
     height: 50px;
+
 }
+
 
 #upload {
     width: 100px;
@@ -24,19 +27,29 @@ input {
     color: white;
     cursor: pointer;
 }
-#input::file-selector-button {
+
+#inputfile::file-selector-button {
     width: 100px;
     height: 50px;
     padding: 6px 25px;
-    background-color: red;
+    background-color: #4CAAAA;
     border-color: #4CAAAA;
     border-radius: 5px;
     color: white;
     cursor: pointer;
 }
 
+
 #img {
     align-items: center;
     justify-content: center;
+}
 
+#input_button{
+    display: grid;
+    width: 80vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }

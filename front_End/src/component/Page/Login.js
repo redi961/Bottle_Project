@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import logo from '../../image/logo.jpg'
+import logo from '../../image/Logo.png'
 import email_img from '../../image/email.jpg'
 import pw from '../../image/pass.png'
 import {useNavigate} from 'react-router-dom'
@@ -70,7 +70,6 @@ function Login() {
                     </div>
                 </div>
                 <div className='container-login'>
-                    <h1>Bottle Collector</h1>
                   <div className='input_zone'>
                     <div className ="div_input">
                       <img src={email_img} alt ="email" className ='input_icon'/>

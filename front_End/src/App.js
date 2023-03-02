@@ -1,16 +1,22 @@
+import "./App.css"
 import Login from "./component/Page/Login";
 import ImageUpload from './component/Page/ImageUpload'
-import SignUp from './component/Page/Signup'
-import "./App.css"
-import {Route, Routes} from 'react-router-dom'
+import Plotly from "./component/Plot/Plotly";
+import Signup from "./component/Page/Signup"
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
     return (
-        <Routes>
-            <Route path ="/" eaxct = {true} element ={<ImageUpload/>}/>
-            <Route path ="/login" eaxct = {true} element ={<Login/>}/>
-            <Route path ="/signup" exact = {true} element ={<SignUp/>}/>
-        </Routes>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<ImageUpload/>}></Route>
+                <Route path="/Login" element={<Login/>}></Route>
+                <Route path="/ImageUpload" element={<ImageUpload/>}></Route>
+                <Route path="/Plotly" element={<Plotly/>}></Route>
+                <Route path="/Signup" element={<Signup/>}></Route>
+
+            </Routes>
+        </BrowserRouter>
     );
 }
 
