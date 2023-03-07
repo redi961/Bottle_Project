@@ -18,6 +18,7 @@
   padding-top: 30px;
   border-radius: 60px; 
   background-color: white;
+  min-width: 450px;
 }
 
 .imgs {
@@ -51,7 +52,9 @@
 .center_div {
   width : 350px
 }
-
+.div_input{
+  padding-top: 20px;
+}
 .input_zone {
   padding-right: 75px;
 }
@@ -71,10 +74,6 @@
   width: 25px;
   position: absolute;
   padding: 14px 0 0 18px;
-}
-
-.div_input {
-  padding-top: 20px;
 }
 
 .second_input {
@@ -120,6 +119,10 @@
   font-size: 22px;
   border: none;
   cursor: pointer;
+}
+
+.menu_button:hover {
+  background-color: rgb(20, 114, 83);
 }
 
 .menu_button:hover {

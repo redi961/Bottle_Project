@@ -1,30 +1,53 @@
-.sidebar{
+.sidebar {
   width: 240px;
-  background-color: #4CAAAA;
-  height: 92vh;
-  padding: 5px;
+  height: 1fr;
+  width: 1fr;
   transition: all 1s;
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0px;
+  background-image: linear-gradient(to right, #77EED8, #9EABE4);
+  padding: 10px 0px 0px 10px;
 }
 
-ul{
-  padding:  0;
+ul {
+  height: 1fr;
+  padding: 0;
+  min-width: 250px;
 }
 
-ul li{
+ul li {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
 }
 
 ul li a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
-  display: block;
-  padding: 10px 15px;
-  border-radius: 10px;
+  font-size: 18px;
+  font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+  padding: 15px;
+  border-radius: 20px 0px 0px 20px;
 }
 
 ul li a:hover,
 ul li a.active {
-   background-color: blue;
+  background-color: white;
+  color: #9EABE4;
+}
+
+.Logo {
+  height: 100px;
+  padding: 0px 0px 40px;
+}
+
+.Logo_zone {
+  display: flex;
+  justify-content: center;
+}
+
+#Login{ 
+  position:fixed;
+  width: 15%;
+  bottom: 0;
+  margin-bottom: 10px;
 }

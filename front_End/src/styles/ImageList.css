@@ -1,0 +1,23 @@
+#ImageList {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+button {
+    border: 1px solid #4CAAAA;
+    border-radius: 10px;
+    padding: 5px;
+    width: 10%;
+    height: 100%;
+    margin: 10px;
+    text-align: center;
+}
+
+.pagination {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

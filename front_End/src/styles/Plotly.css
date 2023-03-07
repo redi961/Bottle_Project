@@ -1,0 +1,78 @@
+.Plot_Content {
+  width: 50%;
+  height: 60%;
+  border: 1px solid #4CAAAA;
+  border-radius: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.count_content {
+  width: 50%;
+  height: 30%;
+  margin: 10px;
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #4CAAAA;
+  border-radius: 10px;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.plotly_button {
+  display: flex;
+  flex-direction: column;
+}
+
+.plotly_button>button {
+  display: grid;
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  border-color: #4CAAAA;
+  color: #4CAAAA;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 10px;
+}
+
+.all_count {  
+  border: 1px solid #4CAAAA;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: 18;
+}
+
+.count_content>div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.count_content>div {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+
+.count_content>div>div {
+  border: 1px solid #4CAAAA;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.count_plot {
+  width: 100%;
+  height: 100%;
+}

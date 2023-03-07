@@ -31,9 +31,15 @@ function Login() {
       user_pass : password
     })
       .then(res => {
-        alert(res.data);
-        if(res.data === "로그인 되었습니다.")
-        document.location.href = "/";
+        if(res.data === "ID_error") {
+          alert ("아이디를 다시 확인해주세요")
+        } else if (res.data === "Pass_error") {
+          alert ("비밀번호가 잘못되었습니다.")
+        } else if (res.data != null) {
+        alert("로그인 되었습니다.")
+        sessionStorage.setItem("name", res.data);
+        document.location.href = "/ImageUpload";
+      }
       })
       .catch(error => {
         // 회원가입 실패 시에 취해야할 액션
