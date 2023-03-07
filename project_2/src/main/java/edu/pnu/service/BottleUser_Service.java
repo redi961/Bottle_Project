@@ -43,6 +43,13 @@ public class BottleUser_Service {
 		BottleUser us = bottleuser_Dao.login(user_id, user_pass);
 		return us;
 	}
+	
+	// 닉네임 표기
+	public String nameDisplay(String user_id) {
+		String name = bottleuser_Dao.nameDisplay(user_id);
+		return name;
+	}
+	
 	// 회원탈퇴
 	public BottleUser withdrawal(String user_id, String user_pass) {
 		BottleUser us = bottleuser_Dao.withdrawal(user_id, user_pass);

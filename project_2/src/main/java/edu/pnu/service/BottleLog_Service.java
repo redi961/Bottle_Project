@@ -21,9 +21,8 @@ public class BottleLog_Service {
 		this.bottlelog_Dao = bottlelog_Dao;
 	}
 
-	public void imageUpload(String imageName, Path path) {
-		bottlelog_Dao.imageUpload(imageName, path);
-		
+	public void imageUpload(String saveNaem, String oriName, Path path, String user_name ,String response) {
+		bottlelog_Dao.imageUpload(saveNaem, oriName,  path, user_name, response);
 	}
 	
 }

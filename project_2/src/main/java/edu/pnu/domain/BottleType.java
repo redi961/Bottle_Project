@@ -1,69 +1,38 @@
 package edu.pnu.domain;
 
 public class BottleType {
-	private Long No;
-	private String soju;
-	private String beer;
-	private String whisky;
-	private String wine;
-	
+	private int No;
+	private String name;
+
 	public BottleType() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public BottleType(Long no, String soju, String beer, String whisky, String wine) {
+	public BottleType(int no, String name) {
 		super();
 		No = no;
-		this.soju = soju;
-		this.beer = beer;
-		this.whisky = whisky;
-		this.wine = wine;
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
-		return "BottleType [No=" + No + ", soju=" + soju + ", beer=" + beer + ", whisky=" + whisky + ", wine=" + wine
-				+ "]";
+		return "Bottle_Type [No=" + No + ", name=" + name + "]";
 	}
 
-	public Long getNo() {
+	public int getNo() {
 		return No;
 	}
 
-	public void setNo(Long no) {
+	public void setNo(int no) {
 		No = no;
 	}
 
-	public String getSoju() {
-		return soju;
+	public String getName() {
+		return name;
 	}
 
-	public void setSoju(String soju) {
-		this.soju = soju;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getBeer() {
-		return beer;
-	}
-
-	public void setBeer(String beer) {
-		this.beer = beer;
-	}
-
-	public String getWhisky() {
-		return whisky;
-	}
-
-	public void setWhisky(String whisky) {
-		this.whisky = whisky;
-	}
-
-	public String getWine() {
-		return wine;
-	}
-
-	public void setWine(String wine) {
-		this.wine = wine;
-	}
-	
 }

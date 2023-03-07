@@ -46,14 +46,15 @@ public class BottleUser_Controller {
 	public String login(@RequestBody BottleUser user) {
 		boolean flag = bottleuser_Service.loginIdcheck(user.getUser_id());
 		if (flag == false) {
-			return "존재하지 않는 ID 입니다.";
+			return "ID_error";
 		} else if (flag == true) {
 			BottleUser log = bottleuser_Service.login(user.getUser_id(), user.getUser_pass());
 			if(log == null) {
-				return "비밀번호가 잘못되었습니다.";
+				return "Pass_error";
 			} 
-		}  
-		return "로그인 되었습니다.";
+		}
+		String name = bottleuser_Service.nameDisplay(user.getUser_id());
+		return name;
 	}
 	
 	// 탈퇴

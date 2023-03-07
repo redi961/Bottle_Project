@@ -72,5 +72,17 @@ public class BottleUser_Mysql_Dao {
 		return us;
 	}
 	
+	//닉네임 추출
+	public String nameDisplay(String user_id) {
+		try {
+		String sqlStr = String.format("select user_name from bottle_user where user_id = '%s'"
+				,user_id);
+		String us = jdbcTemplate.queryForObject(sqlStr, String.class);
+		return us;
+		}catch (IncorrectResultSizeDataAccessException error) {
+			return null;
+		}
+	}
+	
 	
 }

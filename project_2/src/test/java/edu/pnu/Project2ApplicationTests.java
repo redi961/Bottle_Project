@@ -12,10 +12,11 @@ class Project2ApplicationTests {
 	@Autowired
 	BottleUser_Mysql_Dao dao;
 	
+	
 	@Test
 	void contextLoads() {
-		System.out.println("RES ::" + dao.login("naver@naver.com","123455"));
-		System.out.println();		
+		System.out.println("res :: " + dao.nameDisplay("test@test.com"));
+		
 	}
 
 }
